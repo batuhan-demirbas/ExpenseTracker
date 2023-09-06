@@ -17,7 +17,6 @@ struct HomeView: View {
     private var cards: FetchedResults<Card>
     
     @State private var shouldPresentAddCardForm = false
-    @State private var shouldShowAddTransactionForm = false
     
     var body: some View {
         NavigationView {
@@ -33,17 +32,7 @@ struct HomeView: View {
                     .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
                     .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
                     
-                    Text("Get started by adding your first transaction")
-                    
-                    Button("+ Transaction") {
-                        shouldShowAddTransactionForm.toggle()
-                    }
-                    .buttonStyle(.borderedProminent)
-                    .accentColor(.black)
-                    .sheet(isPresented: $shouldShowAddTransactionForm) {
-                        AddTransactionView()
-                    }
-                    
+                    TransactionListView()                    
                     
                 } else {
                     emptyPromptMessage
@@ -115,6 +104,8 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
+        let context = PersistenceController.shared.container.viewContext
         HomeView()
+            .environment(\.managedObjectContext, context)
     }
 }

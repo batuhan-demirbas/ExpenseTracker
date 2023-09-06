@@ -14,6 +14,8 @@ struct AddTransactionView: View {
     @State private var date: Date = Date()
     @State var photoData: Data?
     
+    let currentDate = Date()
+    
     @State private var shouldPresentPhotoPicker = false
     
     @Environment(\.presentationMode) var presentationMode
@@ -24,7 +26,7 @@ struct AddTransactionView: View {
                 Section("information") {
                     TextField("Name", text: $name)
                     TextField("Amount", text: $amount)
-                    DatePicker("Date", selection: $date, displayedComponents: [.date])
+                    DatePicker("Date", selection: $date, in: ...currentDate, displayedComponents: [.date])
                     NavigationLink(destination: Text("TEST")) {
                         Text("Many to many")
                     }

@@ -10,6 +10,8 @@
 		D511AB772A964F5D00F55C16 /* AddTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D511AB762A964F5D00F55C16 /* AddTransactionView.swift */; };
 		D52E8A592A7AD8D300A7426E /* ExpenseData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D52E8A572A7AD8D300A7426E /* ExpenseData.xcdatamodeld */; };
 		D5459AEB2A7D110100319801 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5459AEA2A7D110100319801 /* UIColor+Extension.swift */; };
+		D579EAA32AA86E8E0020EDAC /* TransactionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D579EAA22AA86E8E0020EDAC /* TransactionListView.swift */; };
+		D579EAA72AA872340020EDAC /* CardTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D579EAA62AA872340020EDAC /* CardTransactionView.swift */; };
 		D5E5EE972AA271E0006DE093 /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E5EE962AA271E0006DE093 /* PhotoPickerView.swift */; };
 		D5FA71C42A77FC9400A4CFFC /* ExpenseTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FA71C32A77FC9400A4CFFC /* ExpenseTrackerApp.swift */; };
 		D5FA71C82A77FC9500A4CFFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5FA71C72A77FC9500A4CFFC /* Assets.xcassets */; };
@@ -24,6 +26,8 @@
 		D511AB762A964F5D00F55C16 /* AddTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionView.swift; sourceTree = "<group>"; };
 		D52E8A582A7AD8D300A7426E /* ExpenseData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExpenseData.xcdatamodel; sourceTree = "<group>"; };
 		D5459AEA2A7D110100319801 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		D579EAA22AA86E8E0020EDAC /* TransactionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListView.swift; sourceTree = "<group>"; };
+		D579EAA62AA872340020EDAC /* CardTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTransactionView.swift; sourceTree = "<group>"; };
 		D5E5EE962AA271E0006DE093 /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
 		D5FA71C02A77FC9400A4CFFC /* ExpenseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpenseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5FA71C32A77FC9400A4CFFC /* ExpenseTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTrackerApp.swift; sourceTree = "<group>"; };
@@ -76,6 +80,8 @@
 				D5459AEA2A7D110100319801 /* UIColor+Extension.swift */,
 				D511AB762A964F5D00F55C16 /* AddTransactionView.swift */,
 				D5E5EE962AA271E0006DE093 /* PhotoPickerView.swift */,
+				D579EAA22AA86E8E0020EDAC /* TransactionListView.swift */,
+				D579EAA62AA872340020EDAC /* CardTransactionView.swift */,
 			);
 			path = ExpenseTracker;
 			sourceTree = "<group>";
@@ -158,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D579EAA72AA872340020EDAC /* CardTransactionView.swift in Sources */,
 				D5459AEB2A7D110100319801 /* UIColor+Extension.swift in Sources */,
 				D52E8A592A7AD8D300A7426E /* ExpenseData.xcdatamodeld in Sources */,
 				D5FD143A2A78EFFE00DCE3D9 /* NewCardFormView.swift in Sources */,
@@ -165,6 +172,7 @@
 				D5E5EE972AA271E0006DE093 /* PhotoPickerView.swift in Sources */,
 				D5FA71C42A77FC9400A4CFFC /* ExpenseTrackerApp.swift in Sources */,
 				D511AB772A964F5D00F55C16 /* AddTransactionView.swift in Sources */,
+				D579EAA32AA86E8E0020EDAC /* TransactionListView.swift in Sources */,
 				D5FA71DA2A7801AE00A4CFFC /* HomeView.swift in Sources */,
 				D5FA71DC2A780C0800A4CFFC /* CardView.swift in Sources */,
 			);
