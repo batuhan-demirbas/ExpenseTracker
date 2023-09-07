@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D511AB772A964F5D00F55C16 /* AddTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D511AB762A964F5D00F55C16 /* AddTransactionView.swift */; };
 		D52E8A592A7AD8D300A7426E /* ExpenseData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D52E8A572A7AD8D300A7426E /* ExpenseData.xcdatamodeld */; };
+		D53701E12AA9DB9300D36B51 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53701E02AA9DB9300D36B51 /* UIImage+Extension.swift */; };
 		D5459AEB2A7D110100319801 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5459AEA2A7D110100319801 /* UIColor+Extension.swift */; };
 		D579EAA32AA86E8E0020EDAC /* TransactionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D579EAA22AA86E8E0020EDAC /* TransactionListView.swift */; };
 		D579EAA72AA872340020EDAC /* CardTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D579EAA62AA872340020EDAC /* CardTransactionView.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		D511AB762A964F5D00F55C16 /* AddTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionView.swift; sourceTree = "<group>"; };
 		D52E8A582A7AD8D300A7426E /* ExpenseData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExpenseData.xcdatamodel; sourceTree = "<group>"; };
+		D53701E02AA9DB9300D36B51 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		D5459AEA2A7D110100319801 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		D579EAA22AA86E8E0020EDAC /* TransactionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListView.swift; sourceTree = "<group>"; };
 		D579EAA62AA872340020EDAC /* CardTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTransactionView.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				D5E5EE962AA271E0006DE093 /* PhotoPickerView.swift */,
 				D579EAA22AA86E8E0020EDAC /* TransactionListView.swift */,
 				D579EAA62AA872340020EDAC /* CardTransactionView.swift */,
+				D53701E02AA9DB9300D36B51 /* UIImage+Extension.swift */,
 			);
 			path = ExpenseTracker;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				D579EAA72AA872340020EDAC /* CardTransactionView.swift in Sources */,
 				D5459AEB2A7D110100319801 /* UIColor+Extension.swift in Sources */,
 				D52E8A592A7AD8D300A7426E /* ExpenseData.xcdatamodeld in Sources */,
+				D53701E12AA9DB9300D36B51 /* UIImage+Extension.swift in Sources */,
 				D5FD143A2A78EFFE00DCE3D9 /* NewCardFormView.swift in Sources */,
 				D5FA71CD2A77FC9500A4CFFC /* Persistence.swift in Sources */,
 				D5E5EE972AA271E0006DE093 /* PhotoPickerView.swift in Sources */,

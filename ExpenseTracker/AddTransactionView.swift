@@ -9,13 +9,14 @@ import SwiftUI
 
 struct AddTransactionView: View {
     
+    let card: Card
+    let currentDate = Date()
+    
     @State private var name: String = ""
     @State private var amount: String = ""
     @State private var date: Date = Date()
     @State var photoData: Data?
-    
-    let currentDate = Date()
-    
+            
     @State private var shouldPresentPhotoPicker = false
     
     @Environment(\.presentationMode) var presentationMode
@@ -61,6 +62,7 @@ struct AddTransactionView: View {
         Button("Save") {
             let context = PersistenceController.shared.container.viewContext
             let transaction = CardTransaction(context: context)
+            transaction.card = self.card
             transaction.name = self.name
             transaction.amount = Float(self.amount) ?? 0.0
             transaction.photoData = self.photoData
@@ -86,8 +88,10 @@ struct AddTransactionView: View {
     
 }
 
+/*
 struct AddTransactionView_Previews: PreviewProvider {
     static var previews: some View {
         AddTransactionView()
     }
 }
+*/

@@ -17,22 +17,31 @@ struct HomeView: View {
     private var cards: FetchedResults<Card>
     
     @State private var shouldPresentAddCardForm = false
+    @State private var selectedCardHash = -1
     
     var body: some View {
         NavigationView {
             ScrollView {
                 
                 if !cards.isEmpty {
-                    TabView {
+                    TabView(selection: $selectedCardHash) {
                         ForEach(cards) { card in
                             CardView(card: card)
+                                .tag(card.hash)
                         }
                     }
                     .frame(height: 280)
                     .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
                     .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+                    .onAppear {
+                        selectedCardHash = cards.first?.hash ?? -1
+                    }
                     
-                    TransactionListView()                    
+                    if let firstIndex = cards.firstIndex(where: { $0.hash == selectedCardHash
+                    }) {
+                        let selectedCard = self.cards[firstIndex]
+                        TransactionListView(card: selectedCard)
+                    }
                     
                 } else {
                     emptyPromptMessage
@@ -40,7 +49,9 @@ struct HomeView: View {
                 
                 Spacer()
                     .fullScreenCover(isPresented: $shouldPresentAddCardForm, onDismiss: nil) {
-                        NewCardFormView()
+                        NewCardFormView { card in
+                            selectedCardHash = card.hash
+                        }
                     }
             }
             .navigationTitle("Credit Cards")

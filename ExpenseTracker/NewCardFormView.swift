@@ -10,9 +10,11 @@ import SwiftUI
 struct NewCardFormView: View {
     
     let card: Card?
+    var didAddCard: ((Card) ->())? = nil
     
-    init(card: Card? = nil) {
+    init(card: Card? = nil, didAddCard: ((Card) ->())? = nil) {
         self.card = card
+        self.didAddCard = didAddCard
         
         _name = State(initialValue: card?.name ?? "")
         _number = State(initialValue: card?.number ?? "")
@@ -129,6 +131,7 @@ struct NewCardFormView: View {
             do {
                 try viewContext.save()
                 presentationMode.wrappedValue.dismiss()
+                didAddCard?(card)
             } catch {
                 let nsError = error as NSError
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
